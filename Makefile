@@ -15,3 +15,6 @@ jupyter:
 
 bash-jupyter:
 	docker exec   -it $(BOOKGROUP_JUPYTER) bash
+
+download-datasets:
+	docker run --rm -v $(PWD):/src  -it $(BOOKGROUP_IMAGE) python chapter2/download.py
