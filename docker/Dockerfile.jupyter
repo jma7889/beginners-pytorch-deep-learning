@@ -1,5 +1,5 @@
 FROM bookgroup
-RUN pip install jupyter
+RUN pip install jupyterlab
 
 WORKDIR /src
 

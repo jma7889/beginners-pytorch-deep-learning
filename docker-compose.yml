@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  pytorch:
+    tty: true
+    image: bookgroup_jupyter
+    volumes:
+      - '.:/src'
+    ports:
+      - "8978"
+      - "127.0.0.1:8978:8978"
+
+# useful commends
+# docker-compose exec pytorch bash --login      
+# jupyter-lab --allow-root --port=8978 --ip 0.0.0.0 --no-browser
